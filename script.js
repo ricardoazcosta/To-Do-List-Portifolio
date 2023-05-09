@@ -34,6 +34,8 @@ function mostrarTarefas() {
     })
 
     listaCompleta.innerHTML = novaLista
+
+    localStorage.setItem('lista',JSON.stringify(listaDeItens))
 }
 
 function tarefaConcluida (posicao){
@@ -46,4 +48,15 @@ function deletarTarefa(posicao){
     mostrarTarefas()
 }
 
+function recarregarTarefas (){
+    const tarefasLocalStorage = localStorage.getItem("lista");
+
+    if(tarefasLocalStorage){
+
+        listaDeItens = JSON.parse(tarefasLocalStorage)
+    }
+    mostrarTarefas()
+}
+
+recarregarTarefas();
 button.addEventListener('click', novaTarefa);
