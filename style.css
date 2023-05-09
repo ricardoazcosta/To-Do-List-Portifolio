@@ -13,9 +13,11 @@ body {
 .titulo {
     text-align: center;
     margin-bottom: 20px;
-    color: #5f9ea0;
+    color: #16493F;
     padding-top: 50px;
     font-weight: 600;
+    font-size: 22px;
+   
 }
 
 
@@ -24,12 +26,15 @@ body {
     background-color: #cce3de;
     width: 500px;
     border-radius: 15px;
-    margin: 100px auto 0;
+    margin: 0 auto ;
     padding: 25px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    -webkit-box-shadow: 10px 10px 9px 2px rgba(95, 158, 160, 1);
+    -moz-box-shadow: 10px 10px 9px 2px rgba(95, 158, 160, 1);
+    box-shadow: 10px 10px 9px 2px rgba(95, 158, 160, 1);
 
 }
 
@@ -42,7 +47,7 @@ body {
     font-weight: 600;
     padding: 25px;
     color: #264653;
-    
+    text-transform: capitalize;
 
 
 }
@@ -58,6 +63,7 @@ body {
     float: right;
     cursor: pointer;
     margin: auto;
+    font-size: 18px;
 }
 
 .btn:hover {
@@ -74,7 +80,7 @@ body {
 }
 
 img {
-    height: 25px;
+    height: 28px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -104,5 +110,17 @@ img {
     -moz-box-shadow: 10px 10px 9px 2px rgba(95, 158, 160, 1);
     box-shadow: 10px 10px 9px 2px rgba(95, 158, 160, 1);
     cursor: pointer;
+    text-transform: capitalize;
+    font-size: 18px;
 }
 
+.done {
+    background-color:#298371;
+    text-decoration: line-through;
+    color: #eaf4f4;
+    border: #fff 1px solid;
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    
+}
