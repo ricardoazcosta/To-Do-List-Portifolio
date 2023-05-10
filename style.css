@@ -80,7 +80,7 @@ body {
 }
 
 img {
-    height: 28px;
+    height: 30px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -123,4 +123,28 @@ img {
     font-style: italic;
     font-weight: 400;
     
+}
+
+/* MOBILE */
+@media(max-width: 390px){
+    .titulo {
+        font-size: 18px;
+        color: #298371;
+
+    }
+
+    .input-task{
+        text-align: center;
+        color: darkcyan;
+        margin-bottom: 25px;
+        width: 100%;
+    }
+
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
 }
