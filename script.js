@@ -3,10 +3,16 @@ const input = document.querySelector('.input-task');
 const listaCompleta = document.querySelector(".list-task");
 
 
+const validateInput  = () => input.value.trim().length > 3;
+
 
 let listaDeItens = []
 
 function novaTarefa() {
+    const inputValido = validateInput();
+    if (!inputValido) {
+       return input.classList.add("error");
+    }
     listaDeItens.push({
         tarefa: input.value,
         concluida: false
@@ -14,6 +20,7 @@ function novaTarefa() {
     input.value = "";
     mostrarTarefas()
 }
+
 
 function mostrarTarefas() {
     let novaLista = ''

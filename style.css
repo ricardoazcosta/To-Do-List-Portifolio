@@ -52,6 +52,7 @@ body {
 
 }
 
+
 .btn {
     border: 2px solid #fff;
     border-radius: 10px;
@@ -118,7 +119,7 @@ img {
     background-color:#298371;
     text-decoration: line-through;
     color: #eaf4f4;
-    border: #fff 1px solid;
+    border: #fff 2px solid;
     font-size: 18px;
     font-style: italic;
     font-weight: 400;
