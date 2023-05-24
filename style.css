@@ -8,6 +8,7 @@
 
 body {
     background: url(./assets/background.png);
+   
 }
 
 .titulo {
@@ -38,6 +39,17 @@ body {
 
 }
 
+.container-input {
+    display: flex;
+    flex-direction: column;
+}
+
+
+span{
+    padding-top: 10px;
+    margin-left: 5px;
+}
+
 .input-task {
     border: none;
     border-radius: 10px;
@@ -48,10 +60,18 @@ body {
     padding: 25px;
     color: #264653;
     text-transform: capitalize;
-
-
+    
+    
 }
 
+.error-message {
+    display: none;
+    color: #264653;
+    
+}
+.error{
+    border: 1px solid red !important;
+}
 
 .btn {
     border: 2px solid #fff;
@@ -87,11 +107,7 @@ img {
 }
 
 
-.list-task {
-    width: 100%;
-    list-style: none;
-    margin-top: 30px;
-}
+
 
 .task:hover img {
     opacity: 1;
@@ -115,6 +131,14 @@ img {
     font-size: 18px;
 }
 
+
+.list-task {
+    
+    width: 100%;
+    list-style: none;
+    margin-top: 30px;
+}
+
 .done {
     background-color:#298371;
     text-decoration: line-through;
@@ -136,7 +160,7 @@ img {
 
     .input-task{
         text-align: center;
-        color: darkcyan;
+        color: #044e4e;
         margin-bottom: 25px;
         width: 100%;
     }
@@ -147,5 +171,12 @@ img {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+    }
+
+    .error-message {
+        display: none;
+        position: relative;
+        bottom: 70px;
     }
 }

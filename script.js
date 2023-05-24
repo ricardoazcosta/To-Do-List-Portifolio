@@ -1,6 +1,9 @@
 const button = document.querySelector('.btn');
 const input = document.querySelector('.input-task');
 const listaCompleta = document.querySelector(".list-task");
+const errorMessage = document.querySelector(".error-message");
+
+
 
 
 const validateInput  = () => input.value.trim().length > 3;
@@ -11,15 +14,30 @@ let listaDeItens = []
 function novaTarefa() {
     const inputValido = validateInput();
     if (!inputValido) {
+        errorMessage.style.display = "block";
        return input.classList.add("error");
-    }
+    } else {
+        input.classList.remove("error");
+        
+    } 
     listaDeItens.push({
         tarefa: input.value,
         concluida: false
     });
     input.value = "";
+    
     mostrarTarefas()
 }
+
+
+//document.querySelector("input[name='nome']")
+//.addEventListener("input", function(){
+  //  let caracters = this.value.length;
+   // if (caracters <= 30) 
+    //document.querySelector(".error-message").textContent = caracters;
+    
+//})
+
 
 
 function mostrarTarefas() {
@@ -67,3 +85,4 @@ function recarregarTarefas (){
 
 recarregarTarefas();
 button.addEventListener('click', novaTarefa);
+
